@@ -14,3 +14,5 @@ There's a lot to be done, but for the first version (v0.1.0), there needs to be 
 - Haxe, HaxeFlixel, Lime, and others - HaxeFlixel is used for this game, and HaxeFlixel uses things like Lime, Haxe, Flixel and OpenFL (I think?)
 - Discover HaxeFlixel - A lot of the code is gonna be from Discover HaxeFlixel. I feel like at the end of the project, the code might not look that similar, but this will be used as a base.
 - Vaesea - Nothing yet, also that's me!
+- Sunburn - Desert sand texture used for deserthills background (https://opengameart.org/node/7958)
+- Johan Brodd - Rock texture used for stone tiles (https://opengameart.org/content/totem-construction-kit)
