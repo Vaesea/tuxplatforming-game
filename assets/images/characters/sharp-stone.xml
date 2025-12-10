@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sharp-stone.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="walk0000" x="0" y="33" width="23" height="33" frameX="-4" frameY="-1" frameWidth="32" frameHeight="32"/>
+	<SubTexture name="walk0001" x="46" y="0" width="23" height="33" frameX="-4" frameY="-1" frameWidth="32" frameHeight="32"/>
+	<SubTexture name="walk0002" x="0" y="0" width="23" height="33" frameX="-4" frameY="-1" frameWidth="32" frameHeight="32"/>
+	<SubTexture name="walk0003" x="23" y="0" width="23" height="33" frameX="-4" frameY="-1" frameWidth="32" frameHeight="32"/>
+</TextureAtlas>

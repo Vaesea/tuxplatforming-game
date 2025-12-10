@@ -1,14 +1,19 @@
 package objects;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
 
 class Coin extends FlxSprite
 {
     // Spritesheet
     var coinImage = FlxAtlasFrames.fromSparrow("assets/images/objects/coin.png", "assets/images/objects/coin.xml");
 
-    var scoreAmount = 50;
+    var scoreAmount = 25;
+    var speedFromBlock = -128;
 
     public function new(x:Float, y:Float)
     {
@@ -24,9 +29,39 @@ class Coin extends FlxSprite
 
     public function collect()
     {
+        alive = false;
+        solid = false;
+        
         Global.score += scoreAmount;
         Global.coins += 1;
 
+        FlxG.sound.play("assets/sounds/coin.ogg");
+
+        FlxTween.tween(this, {alpha: 0, y: y - 16}, 0.33, {ease: FlxEase.circOut, onComplete: finishKill});
+    }
+
+    function finishKill(_)
+    {
         kill();
+    }
+
+    public function collectNoSound()
+    {
+        alive = false;
+        solid = false;
+        
+        Global.score += scoreAmount;
+        Global.coins += 1;
+
+        FlxTween.tween(this, {alpha: 0, y: y - 16}, 0.33, {ease: FlxEase.circOut, onComplete: finishKill});
+    }
+
+    public function setFromBlock()
+    {
+        FlxG.sound.play('assets/sounds/coin.ogg');
+        solid = false;
+        acceleration.y = 420;
+        velocity.y = speedFromBlock;
+        new FlxTimer().start(0.3, function(_) {collectNoSound();}, 1);
     }
 }

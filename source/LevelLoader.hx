@@ -1,5 +1,8 @@
 package;
 
+import creatures.desert.DesertTortoise;
+import creatures.desert.SandMonster;
+import creatures.desert.SharpStone;
 import flixel.FlxState;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.editors.tiled.TiledImageLayer;
@@ -8,6 +11,7 @@ import flixel.addons.editors.tiled.TiledObject;
 import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.tile.FlxTilemap;
+import objects.BonusBlock;
 import objects.Coin;
 import objects.solid.Solid;
 import objects.solid.Unisolid;
@@ -18,6 +22,15 @@ class LevelLoader extends FlxState
     public static function loadLevel(state:PlayState, level:String)
     {
         var tiledMap = new TiledMap("assets/data/levels/" + level + ".tmx");
+
+        var music = tiledMap.properties.get("Music");
+        var levelName = tiledMap.properties.get("Level Name");
+        var levelCreator = tiledMap.properties.get("Level Creator");
+
+        Global.levelName = levelName;
+        Global.creatorOfLevel = levelCreator;
+
+        Global.currentSong = music;
 
         // Quickly taken from my other game...
         for (layer in tiledMap.layers)
@@ -73,9 +86,10 @@ class LevelLoader extends FlxState
         state.add(mainTwoMap);
 
         var tuxPosition:TiledObject = getLevelObjects(tiledMap, "Player")[0];
-        state.tux.setPosition(tuxPosition.x, tuxPosition.y - 56);
+        state.tux.setPosition(tuxPosition.x, tuxPosition.y - 48);
 
         // Quickly taken from LevelLoader in my other game that also used Discover HaxeFlixel.
+        // TODO: Put all solid / unisolid things in the same "Solid" object layer.
         for (solid in getLevelObjects(tiledMap, "Solid"))
         {
             var solidSquare = new Solid(solid.x, solid.y, solid.width, solid.height); // Need this because width and height.
@@ -92,6 +106,24 @@ class LevelLoader extends FlxState
         {
             state.items.add(new Coin(coin.x, coin.y - 32));
         }
+
+        for (block in getLevelObjects(tiledMap, "Blocks"))
+        {
+            var blockToAdd = new BonusBlock(block.x, block.y - 32);
+            blockToAdd.content = block.type;
+            state.blocks.add(blockToAdd);
+        }
+
+        for (enemy in getLevelObjects(tiledMap, "Enemies"))
+            switch(enemy.type)
+            {
+                default:
+                    state.enemies.add(new SandMonster(enemy.x, enemy.y - 24));
+                case "desert-tortoise":
+                    state.enemies.add(new DesertTortoise(enemy.x, enemy.y - 29));
+                case "sharp-stone":
+                    state.enemies.add(new SharpStone(enemy.x, enemy.y - 22));
+            }
     }
 
     // This is from a part of Discover HaxeFlixel I have yet to reach again, specifically I used it in my other game and I copied and pasted it from there to here.

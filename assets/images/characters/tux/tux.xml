@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="adel.png">
+<TextureAtlas imagePath="tux.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="stand0000" x="48" y="0" width="45" height="66" frameX="1" frameY="0" frameWidth="48" frameHeight="64"/>
-	<SubTexture name="walk0000" x="0" y="0" width="48" height="64" frameX="2" frameY="-2" frameWidth="48" frameHeight="64"/>
-	<SubTexture name="walk0001" x="48" y="0" width="45" height="66" frameX="1" frameY="0" frameWidth="48" frameHeight="64"/>
-	<SubTexture name="walk0002" x="93" y="0" width="46" height="64" frameX="2" frameY="-2" frameWidth="48" frameHeight="64"/>
-	<SubTexture name="walk0003" x="48" y="0" width="45" height="66" frameX="1" frameY="0" frameWidth="48" frameHeight="64"/>
-	<SubTexture name="jump0000" x="0" y="64" width="45" height="66" frameX="1" frameY="0" frameWidth="48" frameHeight="64"/>
-	<SubTexture name="duck0000" x="93" y="64" width="45" height="54" frameX="1" frameY="-12" frameWidth="48" frameHeight="64"/>
+	<SubTexture name="stand0000" x="42" y="60" width="37" height="59" frameX="-4" frameY="-3" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0000" x="48" y="0" width="46" height="60" frameX="2" frameY="-2" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0001" x="94" y="0" width="43" height="59" frameX="2" frameY="-3" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0002" x="0" y="0" width="48" height="60" frameX="2" frameY="-2" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0003" x="94" y="0" width="43" height="59" frameX="2" frameY="-3" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="jump0000" x="0" y="60" width="42" height="60" frameX="-4" frameY="-2" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="duck0000" x="79" y="60" width="36" height="47" frameX="-4" frameY="-15" frameWidth="47" frameHeight="60"/>
 </TextureAtlas>

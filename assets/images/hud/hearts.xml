@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hearts.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="zero0000" x="98" y="0" width="98" height="34" frameX="1" frameY="1" frameWidth="96" frameHeight="32"/>
+	<SubTexture name="one0000" x="98" y="34" width="98" height="34" frameX="1" frameY="1" frameWidth="96" frameHeight="32"/>
+	<SubTexture name="two0000" x="0" y="34" width="98" height="34" frameX="1" frameY="1" frameWidth="96" frameHeight="32"/>
+	<SubTexture name="three0000" x="0" y="0" width="98" height="34" frameX="1" frameY="1" frameWidth="96" frameHeight="32"/>
+</TextureAtlas>

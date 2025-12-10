@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="firetux.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="stand0000" x="95" y="0" width="37" height="59" frameX="-4" frameY="-3" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0000" x="49" y="0" width="46" height="60" frameX="2" frameY="-2" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0001" x="49" y="60" width="43" height="59" frameX="2" frameY="-3" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0002" x="0" y="0" width="49" height="60" frameX="2" frameY="-2" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="walk0003" x="49" y="60" width="43" height="59" frameX="2" frameY="-3" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="jump0000" x="0" y="60" width="48" height="61" frameX="0" frameY="-1" frameWidth="47" frameHeight="60"/>
+	<SubTexture name="duck0000" x="132" y="0" width="38" height="50" frameX="-4" frameY="-12" frameWidth="47" frameHeight="60"/>
+</TextureAtlas>

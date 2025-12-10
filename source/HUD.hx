@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxState;
+import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 
@@ -8,6 +9,7 @@ class HUD extends FlxState
 {
     var scoreText:FlxText;
     var coinText:FlxText;
+    var healthText:FlxText;
 
     public function new()
     {
@@ -25,19 +27,29 @@ class HUD extends FlxState
         coinText.scrollFactor.set();
         coinText.borderSize = 1.25;
 
+        // Create Health Text (Replace with image at some point)
+        healthText = new FlxText(0, 4, 636, "Health: " + Global.health, 14);
+        healthText.setFormat(null, 14, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        healthText.scrollFactor.set();
+        healthText.borderSize = 1.25;
+
         // Add all text
         add(scoreText);
         add(coinText);
+        add(healthText);
     }
 
     override public function update(elapsed:Float)
     {
         // Update Score Text
-        scoreText.text = "Score: " + 
+        scoreText.text = "Score:\n" + 
         StringTools.lpad(Std.string(Global.score), "0", 5);
 
         // Update Coin Text
         coinText.text = "Coins: " + (Global.coins);
+
+        // Update Health Text
+        healthText.text = "Health: " + (Global.health);
 
         super.update(elapsed);
     }

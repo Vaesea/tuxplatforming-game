@@ -16,15 +16,6 @@ class SolidHurt extends FlxSprite
 
     public function interact(tux:Tux)
     {
-        return; // Placeholder
-    }
-
-    function checkIfHerring(tux:Tux)
-    {
-        // Since this code is from my other game, there's this.
-        // if (tux.invincible == false)
-        // {
-        //    interact(tux);
-        // }
+        tux.takeDamage(1);
     }
 }

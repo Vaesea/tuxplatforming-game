@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sandmonster.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="walk0000" x="0" y="0" width="49" height="35" frameX="1" frameY="-5" frameWidth="48" frameHeight="38"/>
+	<SubTexture name="walk0001" x="49" y="0" width="51" height="33" frameX="2" frameY="-7" frameWidth="48" frameHeight="38"/>
+	<SubTexture name="walk0002" x="0" y="35" width="52" height="31" frameX="2" frameY="-9" frameWidth="48" frameHeight="38"/>
+	<SubTexture name="walk0003" x="49" y="0" width="51" height="33" frameX="2" frameY="-7" frameWidth="48" frameHeight="38"/>
+	<SubTexture name="squished0000" x="0" y="66" width="52" height="19" frameX="2" frameY="-21" frameWidth="48" frameHeight="38"/>
+</TextureAtlas>
