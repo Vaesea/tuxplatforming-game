@@ -1,5 +1,6 @@
 package;
 
+import creatures.desert.Bubble;
 import creatures.desert.DesertTortoise;
 import creatures.desert.SandMonster;
 import creatures.desert.SharpStone;
@@ -123,6 +124,8 @@ class LevelLoader extends FlxState
                     state.enemies.add(new DesertTortoise(enemy.x, enemy.y - 29));
                 case "sharp-stone":
                     state.enemies.add(new SharpStone(enemy.x, enemy.y - 22));
+                case "bubble":
+                    state.enemies.add(new Bubble(enemy.x, enemy.y - 26));
             }
     }
 

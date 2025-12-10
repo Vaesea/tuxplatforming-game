@@ -70,13 +70,14 @@ class SharpStone extends Enemy
 
     override public function interact(tux:Tux)
     {
+        // If currently alive, damage Tux.
         if (currentState == Alive)
         {
             tux.takeDamage(1);
         }
     }
 
-    // Can't be killed by fire right now
+    // Kill fireball, don't take damage.
     override public function collideFireball(fireball:Fireball)
     {
         fireball.kill();
