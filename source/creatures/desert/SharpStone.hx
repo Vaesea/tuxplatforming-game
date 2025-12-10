@@ -76,13 +76,7 @@ class SharpStone extends Enemy
         }
     }
 
-    // Can't be killed right now
-    override public function killFall()
-    {
-        return;
-    }
-
-    // Can't be killed right now
+    // Can't be killed by fire right now
     override public function collideFireball(fireball:Fireball)
     {
         fireball.kill();

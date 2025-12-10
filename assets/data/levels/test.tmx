@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="250" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="126">
+ <properties>
+  <property name="Level Creator" value="Sophie Ball"/>
+  <property name="Level Name" value="Test Level"/>
+  <property name="Music" value="assets/music/tpleveltheme.ogg"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/levelTiles.tsx"/>
  <tileset firstgid="161" source="../tilesets/creatures.tsx"/>
  <tileset firstgid="168" source="../tilesets/items.tsx"/>
