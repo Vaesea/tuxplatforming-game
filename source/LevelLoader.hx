@@ -14,6 +14,7 @@ import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.tile.FlxTilemap;
 import objects.BonusBlock;
 import objects.Coin;
+import objects.solid.Goal;
 import objects.solid.Solid;
 import objects.solid.Unisolid;
 import states.PlayState;
@@ -90,6 +91,15 @@ class LevelLoader extends FlxState
         state.tux.setPosition(tuxPosition.x, tuxPosition.y - 48);
 
         // Quickly taken from LevelLoader in my other game that also used Discover HaxeFlixel.
+        for (object in getLevelObjects(tiledMap, "Level"))
+        {
+            switch (object.type)
+            {
+                case "goal": // Might add a checkpoint at some point, don't replace this with default!
+                    state.items.add(new Goal(object.x, object.y - 32));
+            }
+        }
+        
         // TODO: Put all solid / unisolid things in the same "Solid" object layer.
         for (solid in getLevelObjects(tiledMap, "Solid"))
         {

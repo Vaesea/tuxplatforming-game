@@ -22,6 +22,10 @@ class Crystal extends FlxSprite
 
         // Add gravity
         acceleration.y = gravity;
+
+        // Hitbox
+        setSize(44, 32);
+        offset.set(10, 0);
     }
 
     // Called when Tux touches a crystal

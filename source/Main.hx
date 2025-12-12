@@ -2,13 +2,22 @@ package;
 
 import flixel.FlxGame;
 import openfl.display.Sprite;
-import states.PlayState;
+import states.MainMenuState;
 
 class Main extends Sprite
 {
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(0, 0, PlayState));
+
+		// Initialize save and load progress
+		Global.initSave();
+		Global.loadProgress();
+		
+		// Loading worldmaps (Very needed!)
+		Global.loadWorldmaps();
+
+		// Load game
+		addChild(new FlxGame(0, 0, MainMenuState));
 	}
 }

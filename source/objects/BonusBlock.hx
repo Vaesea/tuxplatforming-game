@@ -70,7 +70,7 @@ class BonusBlock extends FlxSprite
                 FlxG.sound.play("assets/sounds/powerupbox.ogg");
             
             case "crystal":
-                var crystal:Crystal = new Crystal(Std.int(x), Std.int(y - 32));
+                var crystal:Crystal = new Crystal(Std.int(x - 6), Std.int(y - 32));
                 Global.PS.items.add(crystal);
                 FlxG.sound.play("assets/sounds/powerupbox.ogg");
         }

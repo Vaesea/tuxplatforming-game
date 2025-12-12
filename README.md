@@ -13,14 +13,15 @@ There's a lot to be done, but for the first version (v0.1.0), there needs to be 
 ## Credits
 - Haxe, HaxeFlixel, Lime, and others - HaxeFlixel is used for this game, and HaxeFlixel uses things like Lime, Haxe, Flixel and OpenFL (I think?)
 - Discover HaxeFlixel - A lot of the code is gonna be from Discover HaxeFlixel. I feel like at the end of the project, the code might not look that similar, but this will be used as a base.
-- Vaesea - Art, Test Level, Coding
-- FilipOK - Art that will be added later
+- Vaesea - Art, Levels, Music, Coding
+- FilipOK - Art
 - AnatolyStev - Coding (PepperTux code that was used here)
 - Sunburn - Desert sand texture used for deserthills background (https://opengameart.org/node/7958)
 - Johan Brodd - Rock texture used for stone tiles (https://opengameart.org/content/totem-construction-kit)
-- Larry Ewing - Tux
+- Larry Ewing - Tux (and Tux image used in worldmap, which is just a resized version of the original Tux image)
 - leohpaz - Hit sound effect used for squishing enemies (https://opengameart.org/content/12-player-movement-sfx)
 - dklon - Jump sound effect (https://opengameart.org/content/platformer-jumping-sounds)
+- estudiocafofo - Music (https://opengameart.org/content/happy-game-theme-demo)
 - deleted_user_4541234 - Kick sound effect (although the one used is a very short version) (https://freesound.org/people/deleted_user_4541234/sounds/448880/)
 - Legnalegna55 - Wow sound effect (unused, sped up) (https://freesound.org/people/Legnalegna55/sounds/547353/)
 - HighPixel - Fireball sound effect (used for shooting fireballs, cut a little at the beginning) (https://freesound.org/people/HighPixel/sounds/431174/)

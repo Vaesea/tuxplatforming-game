@@ -14,6 +14,7 @@ import objects.BonusBlock;
 import objects.Coin;
 import objects.powerups.Candle;
 import objects.powerups.Crystal;
+import objects.solid.Goal;
 import states.substates.LevelIntro;
 
 class PlayState extends FlxState
@@ -34,6 +35,8 @@ class PlayState extends FlxState
 		// Just so Global.PS actually works...
 		Global.PS = this;
 
+		Global.health = Global.maxHealth;
+
 		// Add things part 2
 		entities = new FlxGroup();
 		collision = new FlxTypedGroup<FlxSprite>();
@@ -43,7 +46,7 @@ class PlayState extends FlxState
 		blocks = new FlxTypedGroup<FlxSprite>();
 		hud = new HUD();
 
-		LevelLoader.loadLevel(this, "test");
+		LevelLoader.loadLevel(this, Global.currentLevel);
 
 		// Add things part 3
 		entities.add(items);
@@ -112,6 +115,11 @@ class PlayState extends FlxState
 		if (Std.isOfType(entity, Candle) || Std.isOfType(entity, Crystal))
 		{
 			(cast entity).collect(tux);
+		}
+
+		if (Std.isOfType(entity, Goal))
+		{
+			(cast entity).reach(tux);
 		}
 	}
 }

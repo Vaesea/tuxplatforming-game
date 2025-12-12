@@ -48,11 +48,11 @@ class DesertTortoise extends Enemy
 
         if (currentHeldEnemyState == Held && held != null)
         {
-            if (held.flipX == true)
+            if (held.flipX)
             {
-                x = held.x - 11;
+                x = held.x - 27;
             }
-            else if (held.flipX == false)
+            else if (!held.flipX)
             {
                 x = held.x + 11;
             }
