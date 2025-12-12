@@ -50,7 +50,7 @@ class DesertTortoise extends Enemy
         {
             if (held.flipX)
             {
-                x = held.x - 25;
+                x = held.x - 27;
             }
             else if (!held.flipX)
             {
