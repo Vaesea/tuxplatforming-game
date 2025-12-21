@@ -12,24 +12,30 @@ import states.PlayState;
 
 class WorldMapState extends FlxState
 {
+    // Create map
     public var map:FlxTilemap;
 
+    // Load Objects
 	public var collision(default, null):FlxTypedGroup<FlxSprite>;
 	public var tux(default, null):WMTux;
 	public var levels(default, null):FlxTypedGroup<Level>;
     public var rocks(default, null):FlxTypedGroup<Rock>;
 
+    // Load HUD
     var hud:WorldmapHUD;
 
     override public function create()
     {
+        // Mouse should not be visible.
         FlxG.mouse.visible = false;
         
-        if (FlxG.sound.music != null) // Check if song is playing, if it is, stop song. This if statement is here just to avoid a really weird crash.
+        // Check if song is playing, if it is, stop song. This if statement is here just to avoid a really weird crash.
+        if (FlxG.sound.music != null)
         {
             FlxG.sound.music.stop();
         }
 
+        // Make sure Global.WMS works
         Global.WMS = this;
 
         // Add things part 1
@@ -38,10 +44,13 @@ class WorldMapState extends FlxState
         rocks = new FlxTypedGroup<Rock>();
         tux = new WMTux();
         
+        // Load worldmap part 1
         var numberOfWorldmap = Global.worldmaps[Global.currentWorldmap];
 
+        // Load worldmap part 2
         WorldmapLoader.loadWorldmap(this, numberOfWorldmap);
         
+        // Check whether any rocks have been unlocked
         checkRockUnlocks();
 
         // Add things part 2
@@ -52,21 +61,25 @@ class WorldMapState extends FlxState
         add(tux);
         add(hud);
 
+        // Set Tux's position
         if (Global.tuxWorldmapX != 0 || Global.tuxWorldmapY != 0)
         {
             tux.x = Global.tuxWorldmapX;
             tux.y = Global.tuxWorldmapY;
         }
 
+        // Create camera
         FlxG.camera.follow(tux, TOPDOWN, 1.0);
         FlxG.camera.setScrollBoundsRect(0, 0, map.width, map.height, true);
 
-        if (Global.currentSong != null) // If it's null and this isn't done, the game will crash.
+        // If it's null and this isn't done, the game will crash.
+        if (Global.currentSong != null)
         {
             FlxG.sound.playMusic(Global.currentSong, 1.0, true);
         }
     }
 
+    // This checks whether any sections are completed, if yes, remove rock for that section.
     public function checkRockUnlocks()
     {
         for (rock in rocks)
@@ -100,7 +113,7 @@ class WorldMapState extends FlxState
             }
         }
 
-        // Is this needed?
+        // Is this needed? This might be able to be replaced with checkRockUnlocks()?
         for (rock in rocks)
         {
             if (rock.isGone)
@@ -115,6 +128,7 @@ class WorldMapState extends FlxState
         }
     }
 
+    // If Tux presses ENTER or SPACE on a Level Square, set Tux's position to level, save progress and start level.
     function overlapLevels(tux:WMTux, square:FlxSprite)
     {
         if (Std.isOfType(square, Level))
@@ -137,6 +151,7 @@ class WorldMapState extends FlxState
         }
     }
 
+    // Check if section is completed
     function sectionCompleted(section:String)
     {
         for (square in levels)
@@ -149,6 +164,7 @@ class WorldMapState extends FlxState
         return true;
     }
 
+    // Never heard of this before, ask AnatolyStev.
     override public function destroy() 
     {
         Global.saveProgress();

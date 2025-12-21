@@ -14,7 +14,7 @@ class Main extends Sprite
 		Global.initSave();
 		Global.loadProgress();
 		
-		// Loading worldmaps (Very needed!)
+		// Loading worldmaps (Will cause a crash if not done!)
 		Global.loadWorldmaps();
 
 		// Load game

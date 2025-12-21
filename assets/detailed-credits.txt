@@ -1,0 +1,63 @@
+These are credits that are even more detailed than the one on the GitHub README. This is in the assets folder so it's included when the game compiles.
+
+The base code is from Discover HaxeFlixel, but it has been modified a lot by Vaesea (for Tux Platforming and PepperTux) and AnatolyStev (for PepperTux)
+The code is licensed under GPL 3.
+
+Most assets, at least the ones made for the game, are licensed under CC-BY-SA 4.0. You can check which assets are made for the game here.
+In cases where the license is not CC-BY-SA 4.0, the license will be put in the same line with the rest of the stuff about the file.
+
+Template:
+path/to/file.extension - Creator - TP/OGA/FS - License - OGA / FS link (if neeeded) - Optional comment
+
+* means anything, only use it at the beginning or end of something, like if there's 2 files with the same name but with different file extensions, like the characters for example.
+
+TP stands for Tux Platforming, OGA stands for OpenGameArt, FS stands for FreeSound.
+
+DATA:
+Everything here is licensed under CC-BY-SA 4.0.
+
+IMAGES:
+assets/images/backgrounds/deserthills.png - Vaesea (Hills and gradient), Sunburn (Sand texture for hills) - TP + OGA - CC-BY 3.0 - https://opengameart.org/node/7958
+All 2D player Tux images are made by Vaesea, they can't have any license as Tux doesn't seem to be under any license. You can use the images freely.
+Worldmap Tux is the image that Larry Ewing created for Linux, which doesn't seem to be under any license, so it seems you can use that image freely.
+assets/images/characters/bubble.* - Vaesea - TP
+assets/images/characters/desert-tortoise.* - Vaesea - TP
+assets/images/characters/sandmonster.* - Vaesea - TP
+assets/images/characters/sharp-stone.* - Vaesea - TP
+assets/images/editor/creatures.png - Vaesea - TP
+assets/images/editor/items.png - Vaesea and FilipOK - TP
+assets/images/editor/worldmap.png - Larry Ewing (Tux), Vaesea (Level Squares and Rocks) - Linux + TP - Level Squares and Rocks are licensed under CC-BY-SA 4.0, don't know if I can say the same for Tux, you'll have to contact Larry Ewing about that, if you can.
+assets/images/hud/heart.png - FilipOK - TP
+assets/images/menu/title.png - Vaesea (Hills, logo and gradients), Sunburn (Sand texture for hills) - TP + OGA - CC-BY 3.0 - https://opengameart.org/node/7958
+assets/images/objects/powerups/candle.png - FilipOK - TP
+assets/images/objects/powerups/crystal.png - FilipOK - TP
+assets/images/objects/bonusblock.* - Vaesea - TP
+assets/images/objects/brick.* - Vaesea - TP
+assets/images/objects/coin.* - Vaesea - TP
+assets/images/objects/fireball.png - Vaesea - TP
+assets/images/particles/brick.png - Vaesea - TP
+assets/images/worldmap/levelsquares.png - Vaesea - TP
+assets/images/worldmap/rock.png - Vaesea - TP
+assets/images/worldmap/tux.png - Larry Ewing - Linux - Not sure what license Tux is, perhaps Tux is even public domain. If you can, ask Larry Ewing about it.
+assets/images/tiles.png - Multiple People - TP + OGA - Uses: https://opengameart.org/content/totem-construction-kit for Stone tiles. Pyramid brick tiles are made by FilipOK.
+
+MUSIC:
+assets/music/portfolio.ogg - estudiocafofo - OGA - GPL 3 - https://opengameart.org/content/happy-game-theme-demo
+assets/music/tpleveltheme.ogg - Vaesea - TP - All songs I made for this game are made using LMMS, I usually wouldn't mention this but I think LMMS is really cool.
+assets/music/tpsnowleveltheme.ogg - Vaesea - TP
+assets/music/tpunderwatertheme.ogg - Vaesea - TP
+
+SOUNDS:
+assets/sounds/coin.ogg - Vaesea - TP - Made using LMMS
+assets/sounds/jump.ogg - dklon - OGA - CC-BY 3.0 - https://opengameart.org/content/platformer-jumping-sounds
+assets/sounds/hit.ogg - leohpaz - OGA - CC-BY 3.0 / 4.0 - https://opengameart.org/content/12-player-movement-sfx
+assets/sounds/monsandroar.ogg - Vaesea - TP - Made using Audacity and my own voice
+assets/sounds/powerupbox.ogg - Vaesea - TP - Made using LMMS
+assets/sounds/tux*.ogg - Vaesea - TP - Made using Audacity and my own voice
+assets/sounds/fireball.ogg - HighPixel - FS - https://freesound.org/people/HighPixel/sounds/431174/ - Cut a small part at the beginning
+assets/sounds/snare.ogg - ErrorCell - FS - https://freesound.org/people/HighPixel/sounds/431174/
+assets/sounds/snare2.ogg - johnthewizar - FS - https://freesound.org/people/johnthewizar/sounds/264794/
+assets/sounds/impact.ogg - DeltaCode - FS - https://freesound.org/people/DeltaCode/sounds/667654/
+assets/sounds/kick.ogg - deleted_user_4541234 - FS - https://freesound.org/people/deleted_user_4541234/sounds/448880/
+
+That should be everything! If something is wrong or was missed, please tell me!

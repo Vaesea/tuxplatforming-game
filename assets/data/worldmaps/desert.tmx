@@ -76,7 +76,7 @@
   </object>
   <object id="22" gid="242" x="416" y="704" width="32" height="32">
    <properties>
-    <property name="path" value="assets/data/levels/placeholder.tmx"/>
+    <property name="path" value="exploring_desert_ruins"/>
     <property name="section" value="1"/>
    </properties>
   </object>

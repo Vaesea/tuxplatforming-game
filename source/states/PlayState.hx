@@ -32,6 +32,7 @@ class PlayState extends FlxState
 	public var bricks(default, null):FlxTypedGroup<FlxSprite>;
 	private var hud:HUD;
 	private var entities:FlxGroup;
+	public var solidObjects:FlxGroup;
 
 	override public function create()
 	{
@@ -42,6 +43,7 @@ class PlayState extends FlxState
 
 		// Add things part 2
 		entities = new FlxGroup();
+		solidObjects = new FlxGroup();
 		collision = new FlxTypedGroup<FlxSprite>();
 		enemies = new FlxTypedGroup<Enemy>();
 		tux = new Tux();
@@ -57,6 +59,9 @@ class PlayState extends FlxState
 		entities.add(bricks);
 		entities.add(blocks);
 		entities.add(enemies);
+		solidObjects.add(blocks);
+		solidObjects.add(bricks);
+		solidObjects.add(collision);
 		add(collision);
 		add(entities);
 		add(tux);

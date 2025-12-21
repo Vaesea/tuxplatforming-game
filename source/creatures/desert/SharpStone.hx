@@ -53,7 +53,7 @@ class SharpStone extends Enemy
         var hasGround = false;
 
         // Check for no solid objects
-        if (FlxG.overlap(point, Global.PS.blocks) || FlxG.overlap(point, Global.PS.collision))
+        if (FlxG.overlap(point, Global.PS.solidObjects))
         {
             hasGround = true;
         }
